@@ -1,0 +1,4 @@
+- [x] Update ecommerce.html: Wrap all product-items in flip-card structure, add quantity input and confirm button on back.
+- [x] Update script.js: Modify addToCart to handle quantity, update cart display for quantities.
+- [x] Complete quantity selection for remaining products (Grapes, Onion, Apples).
+- [ ] Test the flip and add functionality.

@@ -3,55 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My E-Commerce App</title>
+  <title>Krishna Mart</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Welcome to T3 Mart </h1>
+      <img src="1000102363.jpg" alt="Logo">
+      <h1>Welcome to Krishna Mart </h1>
       <p>Your one-stop shop for all your needs!</p>
-    </header>
+            <p>Radhe Radhe!</p>
 
+    </header>
+    
     <!-- Product Section -->
     <section class="products">
     <div class="product-item"> <img src="Screenshot 2025-03-08 161910.png" alt="Product 1"> <h2>What ever you want we deliver in 15 mins
       Lets Go! </h2></div>
-      <div class="product-item">
-        <img src="lars-blankers-B0s3Xndk6tw-unsplash.jpg" alt="Product 1">
-        <h3>Potatos </h3>
-        <p>₹20/kg</p>
-        <button onclick="addToCart('Potato', 20)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="lars-blankers-B0s3Xndk6tw-unsplash.jpg" alt="Product 1">
+              <h3>Potatos </h3>
+              <p>₹20/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-potato" min="1" value="1" placeholder="Quantity (kg)">
+              <button onclick="addToCartWithQty('Potato', 20, 'qty-potato', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="pexels-akio-1093038.jpg" alt="Product 2">
-        <h3>Bananas</h3>
-        <p>₹30/12 pieces </p>
-        <button onclick="addToCart('Bananas', 30)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="pexels-akio-1093038.jpg" alt="Product 2">
+              <h3>Bananas</h3>
+              <p>₹30/12 pieces </p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-bananas" min="1" value="1" placeholder="Quantity (dozen)">
+              <button onclick="addToCartWithQty('Bananas', 30, 'qty-bananas', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="pexels-pixabay-60021.jpg" alt="Product 3">
-        <h3>Grapes</h3>
-        <p>₹50/kg</p>
-        <button onclick="addToCart('Grapes', 50)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="pexels-pixabay-60021.jpg" alt="Product 3">
+              <h3>Grapes</h3>
+              <p>₹50/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-grapes" min="1" value="1" placeholder="Quantity (kg)">
+              <button onclick="addToCartWithQty('Grapes', 50, 'qty-grapes', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="Screenshot 2025-03-08 153555.png" alt="Product 3">
-        <h3>Onion</h3>
-        <p>₹25/kg</p>
-        <button onclick="addToCart('Onion', 25)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="Screenshot 2025-03-08 153555.png" alt="Product 3">
+              <h3>Onion</h3>
+              <p>₹25/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Added to Cart!</h3>
+              <p>Onions have been added to your cart.</p>
+              <button onclick="flipBack(this)">Continue Shopping</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="side-view-apple-mix-green-yellow-red-apples-background.jpg" alt="Product 3">
-        <h3>Apples</h3>
-        <p>₹60/kg</p>
-        <button onclick="addToCart('Apples', 60)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="side-view-apple-mix-green-yellow-red-apples-background.jpg" alt="Product 3">
+              <h3>Apples</h3>
+              <p>₹60/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Added to Cart!</h3>
+              <p>Apples have been added to your cart.</p>
+              <button onclick="flipBack(this)">Continue Shopping</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="Screenshot 2025-03-08 160828.png" alt="Product 3">
-        <h3>Watermelon</h3>
-        <p>₹35/kg</p>
-        <button onclick="addToCart('Watermelon', 35)">Add to Cart</button>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="Screenshot 2025-03-08 160828.png" alt="Product 3">
+              <h3>Watermelon</h3>
+              <p>₹35/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-watermelon" min="1" value="1" placeholder="Quantity (kg)">
+              <button onclick="addToCartWithQty('Watermelon', 35, 'qty-watermelon', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="Screenshot 2025-03-08 153555.png" alt="Product 3">
+              <h3>Onion</h3>
+              <p>₹25/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-onion" min="1" value="1" placeholder="Quantity (kg)">
+              <button onclick="addToCartWithQty('Onion', 25, 'qty-onion', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="product-item">
+              <img src="side-view-apple-mix-green-yellow-red-apples-background.jpg" alt="Product 3">
+              <h3>Apples</h3>
+              <p>₹60/kg</p>
+              <button onclick="flipToOptions(this)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="product-item">
+              <h3>Select Quantity</h3>
+              <input type="number" id="qty-apples" min="1" value="1" placeholder="Quantity (kg)">
+              <button onclick="addToCartWithQty('Apples', 60, 'qty-apples', this)">Confirm Add</button>
+              <button onclick="flipBack(this)">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -89,6 +214,7 @@
         <h3>Select Payment Method</h3>
         <button onclick="showPaymentOptions('payment')">Credit Card/Debit Card</button>
         <button onclick="showPaymentOptions('cod')">Cash on Delivery (COD)</button>
+        <button onclick="showPaymentOptions('Qr payment')">Qr payment</button>
       </div>
       
       <div class="payment-form" id="payment-form" style="display: none;">
@@ -110,7 +236,13 @@
       <div class="cod-message" id="cod-message" style="display: none;">
         <h3>Cash on Delivery</h3>
         <p>Thank you for choosing Cash on Delivery. Your order will be shipped soon.</p>
+                <p>Radhe Radhe!</p>
+
       </div>
+      <div id="qr-payment" style="display: none;">
+        <h3>QR Payment</h3>
+        <p>Please scan the QR code to proceed with the payment.</p>
+        <img src="1000092921.png" alt="QR Code" style="width: 300px; height:380px;">
     </section>
 
     <footer>
